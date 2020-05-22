@@ -10,10 +10,10 @@ import { product } from '../product'
 
 export class ProductTableComponent implements OnInit {
 
-  private Products: product[] = [];
+  private Products:Array<any>;
   private page = 1;
   private pageSize = 4;
-  private collectionSize = this.Products.length;
+  private collectionSize = 20;
 
   
   constructor(
@@ -21,7 +21,7 @@ export class ProductTableComponent implements OnInit {
   ) { }
 
   ngOnInit() { 
-    this.getProducts();
+    this.getProducts()
   }
 
   getProducts() {
@@ -35,9 +35,13 @@ export class ProductTableComponent implements OnInit {
     )
   }
 
-  get products(): product[] {
+  productPage() {
     this.getProducts()
-    return this.Products
+  }
+
+  get products(): product[] {
+    // this.getProducts()
+    return (this.Products)
       .map((product, i) => ({id: i + 1, ...product}))
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }

@@ -19,4 +19,4 @@
     </tbody>
   </table>
 
-  <ngb-pagination class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination>
+  <ngb-pagination (click)="productPage()" class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination>
