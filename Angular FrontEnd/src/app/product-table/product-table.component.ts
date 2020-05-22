@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PRODUCTS } from '../products'
+import { ProductService } from '../product.service'
 import { product } from '../product'
 
 @Component({
@@ -10,16 +10,27 @@ import { product } from '../product'
 
 export class ProductTableComponent implements OnInit {
 
-  constructor() { }
+  Products: product[] = [];
+
+  constructor(
+    private productService: ProductService
+  ) { 
+    this.productService.getProducts()
+    .subscribe(res =>
+      this.Products = res
+    )
+  }
 
   page = 1;
   pageSize = 4;
-  collectionSize = PRODUCTS.length;
+  collectionSize = this.Products.length;
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    
+  }
 
   get products(): product[] {
-    return PRODUCTS
+    return this.Products
       .map((product, i) => ({id: i + 1, ...product}))
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
