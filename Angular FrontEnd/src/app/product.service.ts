@@ -15,4 +15,8 @@ export class ProductService{
   getProducts(): Observable<product[]> {
     return this.http.get<product[]>('/api/allProducts')
   }
+
+  getProduct(size): Observable<product> {
+    return this.http.get<product>('/api/allProducts' + 'product/' + size)
+  }
 }
