@@ -1,6 +1,6 @@
 import { Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { product } from './product'
+import { Product } from './product'
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,15 +14,15 @@ export class ProductService{
     private http : HttpClient
   ) { }
 
-  getProducts(page: number): Observable<product[]> {
-    return this.http.get<product[]>(this.baseURL + '/products/list?page=' + page)
+  getProducts(page: number): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseURL + '/products/list?page=' + page)
   }
 
   getSize(){
     return this.http.get(this.baseURL + '/products/size')
   }
 
-  search(q, offset, limit): Observable<product[]> {
-    return this.http.get<product[]>("http://localhost:8080/products/list/search?query=" + q + "&offset=" + offset + "&limit=" + limit)
+  search(q, offset, limit): Observable<Product[]> {
+    return this.http.get<Product[]>("http://localhost:8080/products/list/search?query=" + q + "&offset=" + offset + "&limit=" + limit)
   }
 }

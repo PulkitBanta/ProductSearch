@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service'
-import { product } from '../product'
+import { Product } from '../product'
 
 @Component({
   selector: 'app-product-table',
@@ -10,7 +10,7 @@ import { product } from '../product'
 
 export class ProductTableComponent implements OnInit {
 
-  private Products: product[] = [];
+  private products: Product[] = [];
   private page = 1;
   private collectionSize;
   private query: string;
@@ -27,17 +27,21 @@ export class ProductTableComponent implements OnInit {
   }
 
   search() {
-    this.productService.search(this.query, this.offset, this.limit).subscribe(
-      res => {
-        this.Products = res
-      }
-    )
+    if(this.query == "")
+      this.getProducts()
+    else {
+      this.productService.search(this.query, this.offset, this.limit).subscribe(
+        res => {
+          this.products = res
+        }
+      )
+    }
   }
 
   getProducts() {
     this.productService.getProducts(this.page - 1).subscribe(
       res => { 
-        this.Products = res
+        this.products = res
       },
       (error) => { console.log(error) }
     )
