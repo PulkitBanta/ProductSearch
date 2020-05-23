@@ -10,40 +10,45 @@ import { product } from '../product'
 
 export class ProductTableComponent implements OnInit {
 
-  private Products:Array<any>;
+  private Products: product[] = [];
   private page = 1;
-  private pageSize = 4;
-  private collectionSize = 20;
-
+  private collectionSize;
+  private query: string;
+  private offset: number = 0;
+  private limit: number = 10;
   
   constructor(
     private productService: ProductService
   ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.getProducts()
+    this.getPageSize()
   }
 
-  getProducts() {
-    this.productService.getProducts().subscribe(
-      res => { 
-        this.Products = res,
-        this.collectionSize = this.Products.length
-        this.Products = this.products
-      },
-      (error) => { console.log(error.error.message) }
+  search() {
+    this.productService.search(this.query, this.offset, this.limit).subscribe(
+      res => {
+        this.Products = res
+      }
     )
   }
 
-  productPage() {
-    this.getProducts()
+  getProducts() {
+    this.productService.getProducts(this.page - 1).subscribe(
+      res => { 
+        this.Products = res
+      },
+      (error) => { console.log(error) }
+    )
   }
 
-  get products(): product[] {
-    // this.getProducts()
-    return (this.Products)
-      .map((product, i) => ({id: i + 1, ...product}))
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  getPageSize() {
+    this.productService.getSize().subscribe(
+      res => {
+        this.collectionSize = Number(res)
+      }
+    )
   }
 
 }

@@ -1,22 +1,27 @@
-<table class="table table-striped">
+<div class="container">
+  <div class="form-group mt-5">
+    <input (input)="search()" [(ngModel)]="query" id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
+  </div>
+  <table class="table table-striped">
     <thead>
-    <tr>
+      <tr>
       <th scope="col">##</th>
       <th scope="col">Product Image</th>
       <th scope="col">Product Name</th>
       <th scope="col">Description</th>
       <th scope="col">Price</th>
-    </tr>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let product of Products; index as i">
+      <tr *ngFor="let product of Products; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td><img class="mr-2" src="{{ product?.image_url }}" height="50" width="50"></td>
       <td>{{ product?.name }}</td>
       <td>{{ product?.description }}</td>
       <td>{{ product?.price | number }} $</td>
-    </tr>
+      </tr>
     </tbody>
   </table>
 
-  <ngb-pagination (click)="productPage()" class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination>
+<ngb-pagination (click)="getProducts()" class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" pageSize="4"></ngb-pagination>
+</div>

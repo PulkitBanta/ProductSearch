@@ -8,15 +8,21 @@ import { Observable } from 'rxjs';
 })
 export class ProductService{
 
+  private baseURL: string = "http://localhost:8080"
+
   constructor(
     private http : HttpClient
   ) { }
 
-  getProducts(): Observable<product[]> {
-    return this.http.get<product[]>('/api/allProducts')
+  getProducts(page: number): Observable<product[]> {
+    return this.http.get<product[]>(this.baseURL + '/products/list?page=' + page)
   }
 
-  getProduct(size): Observable<product[]> {
-    return this.http.get<product[]>('/api/allProducts' + 'product/' + size)
+  getSize(){
+    return this.http.get(this.baseURL + '/products/size')
+  }
+
+  search(q, offset, limit): Observable<product[]> {
+    return this.http.get<product[]>("http://localhost:8080/products/list/search?query=" + q + "&offset=" + offset + "&limit=" + limit)
   }
 }
