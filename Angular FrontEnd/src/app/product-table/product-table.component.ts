@@ -33,6 +33,7 @@ export class ProductTableComponent implements OnInit {
       this.productService.search(this.query, this.offset, this.limit).subscribe(
         res => {
           this.products = res
+          this.productService.sort(this.products)
         }
       )
     }
@@ -42,6 +43,7 @@ export class ProductTableComponent implements OnInit {
     this.productService.getProducts(this.page - 1).subscribe(
       res => { 
         this.products = res
+        this.productService.sort(this.products)
       },
       (error) => { console.log(error) }
     )
