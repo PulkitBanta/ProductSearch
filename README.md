@@ -1,27 +1,47 @@
-# ProductSearch
+# Product Search
 
-A Progressive Web App which displays the Product list.
-User can also search for products within the app. 
+A Progressive Web App which displays the Product list retrieved from REST API.
 
-# Development server
+# Project Setup
 
 ### Frontend
 
-Run `ng serve` or `npm run start` for a UI server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Navigate to the Frontend folder.
+- Run `ng serve` or `npm run start` for a UI server.
+- Navigate to `http://localhost:4200/`.
+- The app will automatically reload if you change any of the source files.
 
 ### Backend
 
-Run `server.bat` file in Windows or `mvn install && mvn spring-boot:run` in Linux or Unix System.
+- Navigate to the backend folder.
+- Run `server.bat` file in Windows.
+- `mvn install && mvn spring-boot:run` in Linux or Unix System.
 
-## Project Setup
+`Note: Run Backend server before the Frontend server to see the actual product.`
 
-- _Frontend_ - Navigate to Angular Frontend folder and run `npm install`.
-- _Backend_  - Run `server.bat` file in Windows or `mvn install && mvn spring-boot:run` in Linux or Unix System.
+# Features
+- Search products in the search bar and get results as you start typing.
+- Navigate all the products with the use of navigation buttons under the table.
+- Products are sorted by Name in every page.
 
-## Built With
+![Features](../ImageResource/features.png)
 
-- [Angular](https://angular.io/) - One framework. Mobile & desktop.
-- [SpringBoot](https://spring.io/projects/spring-boot) - Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+# Dependencies
+
+## Spring-Boot
+
+- Spring Boot starter Web
+- Spring Boot starter Test
+
+## Angular
+
+- Bootstrap 4
+- Ng-bootstrap
+
+# Built With
+
+- **[Angular](https://angular.io/)** - One framework. Mobile & desktop.
+- **[SpringBoot](https://spring.io/projects/spring-boot)** - Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
 
 ## Contributing
 
