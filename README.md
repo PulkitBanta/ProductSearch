@@ -32,6 +32,7 @@ A Progressive Web App which displays the Product list retrieved from REST API.
 
 - Spring Boot starter Web
 - Spring Boot starter Test
+- json-simple 1.1.1
 
 ## Angular
 

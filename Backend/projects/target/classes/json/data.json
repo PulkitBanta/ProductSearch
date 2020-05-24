@@ -1,0 +1,87 @@
+
+[
+    {
+        "image_url": "https://images.unsplash.com/photo-1563297007-0686b7003af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1091&q=80",
+        "name": "Logitech G304 Mouse",
+        "desrciption": "Gaming Mouse with best sensor for competitive gaming",
+        "price": "82"
+    },
+    {
+        "image_url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        "name": "Redragon Mechanincal Keyboard",
+        "desrciption": "Best Mechanical Keyboard with Cherry MX Red switches",
+        "price": "143"
+    },
+    {
+        "image_url": "https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
+        "name": "Asus HDR Monitor",
+        "desrciption": "HDR monitor for pixel accuracy, 100% RGB accuracy",
+        "price": "289"
+    },
+    {
+        "image_url": "https://images.unsplash.com/photo-1551642044-b5e65d8a7fac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80",
+        "name": "AMD Ryzen 3900x",
+        "desrciption": "Great processor with 16 cores, 32 threads.",
+        "price": "419"
+    },
+    {
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71NJEd2NO%2BL._SL1000_.jpg",
+        "name": "Corsair MM800 Mousepad",
+        "desrciption": "Corsair mousepad with RGB, best for precision aiming",
+        "price": "40"
+    },
+    {
+        "image_url": "https://www.computeruniverse.net/images/1000/907099826E2E31ED9D654B27B23DE455.jpg",
+        "name": "Corsair LL140 RGB Fans",
+        "desrciption": "140mm Fans which will keep your system cool",
+        "price": "55"
+    },
+    {
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/7149ZGA38mL._SL1500_.jpg",
+        "name": "IKEA MICKE Workstation Desk",
+        "desrciption": "The best workstation table made with high quality wood",
+        "price": "210"
+    },
+    {
+        "image_url": "https://microless.com/cdn/products/0aa7a05f166306e967f35c791b9b0e95-hi.jpg",
+        "name": "Corsair Vengeance RGB",
+        "desrciption": "16 gb RAM kit, with some RGB",
+        "price": "78"
+    },
+    {
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/81ZWWtwWf6L._SL1500_.jpg",
+        "name": "Samsung 970 EVO Plus",
+        "desrciption": "Fastest storage device availabe in the market",
+        "price": "178"
+    },
+    {
+        "image_url": "https://i0.wp.com/content.crucial.com/content/dam/crucial/ssd-products/bx500/images/in-use/crucial-bx500-inuse-image-1.psd.transform/small-png/image.jpg?ssl=1",
+        "name": "Crucial BX500 250Gb",
+        "desrciption": "Install your Operating System and some light weight games for fast run",
+        "price": "30"
+    },
+    {
+        "image_url": "https://images.tweaktown.com/content/3/6/3633_01.jpg",
+        "name": "Corsair GS800 800W Power Supply",
+        "desrciption": "80+ platinum rated Power Supply best for your tower",
+        "price": "220"
+    },
+    {
+        "image_url": "https://www.moddiy.com/product_images/u/587/IMG_8806s__19228_zoom.JPG",
+        "name": "Corsair Modular Sleeve",
+        "desrciption": "Make your system look modern wiht these cables",
+        "price": "40"
+    },
+    {
+        "image_url": "https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/1779/large_bf09d83f5909eb72.jpg",
+        "name": "H500 NZXT",
+        "desrciption": "For a beast gaming pc you will also need a beast gaming tower",
+        "price": "96"
+    },
+    {
+        "image_url": "https://www.incredible.co.za/media/catalog/product/cache/3/image/1400x/0dc2d03fe217f8c83829496872af24a0/m/a/masterliquid_ml120r.png",
+        "name": "Cooler Master Liquid CPU Cooler",
+        "desrciption": "CPU cooler with inbuilt customizable LED",
+        "price": "114"
+    }
+]
