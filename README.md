@@ -24,7 +24,7 @@ A Progressive Web App which displays the Product list retrieved from REST API.
 - Navigate all the products with the use of navigation buttons under the table.
 - Products are sorted by Name in every page.
 
-![Features](../ImageResource/features.png)
+![Features](ImageResource/features.png)
 
 # Dependencies
 
