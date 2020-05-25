@@ -13,7 +13,7 @@ A Progressive Web App which displays the Product list retrieved from REST API.
 
 ### Backend
 
-- Navigate to the backend folder.
+- Navigate to the projects folder inside Backend.
 - Run `server.bat` file in Windows.
 - `mvn install && mvn spring-boot:run` in Linux or Unix System.
 
