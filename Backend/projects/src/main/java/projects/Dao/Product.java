@@ -6,9 +6,7 @@ public class Product {
 	private String description;
 	private int price;
 	
-	public Product() {
-			
-	}
+	public Product() { }
 	
 	public Product(String image_url, String name, String description, int price) {
 		this.image_url = image_url;
