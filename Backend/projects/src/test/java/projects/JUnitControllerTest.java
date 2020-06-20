@@ -2,13 +2,10 @@ package projects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import projects.Dao.Product;
 import projects.cont.contr1;
 
 public class JUnitControllerTest {

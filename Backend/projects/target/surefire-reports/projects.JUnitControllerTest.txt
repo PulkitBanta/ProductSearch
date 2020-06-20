@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: projects.JUnitControllerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.07 s - in projects.JUnitControllerTest
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.078 s <<< FAILURE! - in projects.JUnitControllerTest
+productsLength  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.NullPointerException
+	at projects.JUnitControllerTest.productsLength(JUnitControllerTest.java:37)
+
+checkProducts  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at projects.JUnitControllerTest.checkProducts(JUnitControllerTest.java:45)
+
