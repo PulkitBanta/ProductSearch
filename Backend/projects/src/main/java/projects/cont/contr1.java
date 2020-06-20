@@ -15,6 +15,7 @@ import projects.service.ProductService;
 @CrossOrigin(origins="http://localhost:4200", allowedHeaders="*")
 @RestController
 public class contr1 {
+	
 	@Autowired
 	private ProductService ProductService;
 	
