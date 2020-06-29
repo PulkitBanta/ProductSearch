@@ -20,7 +20,7 @@ export class ProductService{
   }
 
   // total size of the data
-  getSize(){
+  getSize(): any{
     return this.http.get(this.baseURL + '/products/size')
   }
 

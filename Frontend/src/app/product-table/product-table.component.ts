@@ -10,7 +10,7 @@ import { Product } from '../product'
 
 export class ProductTableComponent implements OnInit {
 
-  private products: Product[] = [];
+  private products$: Product[] = [];
   private page = 1;
   private collectionSize;
   private query: string;
@@ -26,30 +26,30 @@ export class ProductTableComponent implements OnInit {
     this.getPageSize()
   }
 
-  search() {
+  search(): void {
     if(this.query == "")
       this.getProducts()
     else {
       this.productService.search(this.query, this.offset, this.limit).subscribe(
         res => {
-          this.products = res
-          this.productService.sort(this.products)
+          this.products$ = res
+          this.productService.sort(this.products$)
         }
       )
     }
   }
 
-  getProducts() {
+  getProducts(): void {
     this.productService.getProducts(this.page - 1).subscribe(
       res => { 
-        this.products = res
-        this.productService.sort(this.products)
+        this.products$ = res
+        this.productService.sort(this.products$)
       },
       (error) => { console.log(error) }
     )
   }
 
-  getPageSize() {
+  getPageSize(): void {
     this.productService.getSize().subscribe(
       res => {
         this.collectionSize = Number(res)
