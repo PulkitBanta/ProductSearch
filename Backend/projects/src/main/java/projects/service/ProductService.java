@@ -44,7 +44,7 @@ public class ProductService {
 			return products;
 				
 		for(int i = offset; i < products.size(); i++) {
-			if((products.get(i).getDescription().trim().toLowerCase().contains(query) || products.get(i).getName().toLowerCase().trim().contains(query) || String.valueOf(products.get(i).getPrice()).contains(query)) && res.size() < limit)
+			if((products.get(i).toString().trim().toLowerCase().contains(query) || products.get(i).getName().toLowerCase().trim().contains(query) || String.valueOf(products.get(i).getPrice()).contains(query)) && res.size() < limit)
 					res.add(products.get(i));
 		}
 				

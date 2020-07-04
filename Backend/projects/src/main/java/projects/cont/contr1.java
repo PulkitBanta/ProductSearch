@@ -3,7 +3,6 @@ package projects.cont;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +34,7 @@ public class contr1 {
 	}
 	
 	@GetMapping("/products/list/search")
-	public List<Product> search(@RequestParam(defaultValue="0") String query, int offset, int limit) { 
+	public List<Product> search(@RequestParam(defaultValue="") String query,@RequestParam(defaultValue="0") int offset,@RequestParam(defaultValue="10") int limit) { 
 		return ProductService.searchResult(query, offset, limit);
 	}
 	 

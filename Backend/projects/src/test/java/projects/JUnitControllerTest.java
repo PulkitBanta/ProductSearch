@@ -10,16 +10,16 @@ import projects.cont.contr1;
 
 public class JUnitControllerTest {
 
+	private contr1 controller = new contr1();
+	
     @Test
     public void testController() {
-    	contr1 controller = new contr1();
         String result = controller.hello();
         assertEquals(result, "Working from Spring Boot");
     }
     
     @Test
 	public void contexLoads() throws Exception {
-    	contr1 controller = new contr1();
 		assertThat(controller).isNotNull();
 	}
 }
