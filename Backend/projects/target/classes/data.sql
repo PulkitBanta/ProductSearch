@@ -1,0 +1,2 @@
+INSERT INTO PRODUCT VALUES
+(1, '', 'Ryzen 5600', 'CPU', 20000);
