@@ -1,6 +1,13 @@
 <div class="container">
   <div class="form-group mt-5">
-    <input (input)="search()" [(ngModel)]="query" id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
+    <div class="row">
+      <div class="col-md-9 offset-md-1">
+        <input (input)="search()" [(ngModel)]="query" id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
+      </div>
+      <div class="col-md-1 text-right">
+        <button class="btn btn-outline-secondary">Search</button>
+      </div>
+    </div>
   </div>
   <table class="table table-striped">
     <thead>
@@ -22,6 +29,4 @@
       </tr>
     </tbody>
   </table>
-
-<ngb-pagination (click)="getProducts()" class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" pageSize="4"></ngb-pagination>
 </div>
