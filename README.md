@@ -24,20 +24,7 @@ A Progressive Web App which displays the Product list retrieved from REST API.
 - Navigate all the products with the use of navigation buttons under the table.
 - Products are sorted by Name in every page.
 
-![Features](ImageResource/features.png)
-
-# Dependencies
-
-## Spring-Boot
-
-- Spring Boot starter Web
-- Spring Boot starter Test
-- json-simple 1.1.1
-
-## Angular
-
-- Bootstrap 4
-- Ng-bootstrap
+![Features](screenshots/features.png)
 
 # Built With
 
