@@ -3,12 +3,12 @@ import { ProductService } from '../product.service'
 import { Product } from '../product'
 
 @Component({
-  selector: 'app-product-table',
-  templateUrl: './product-table.component.html',
-  styleUrls: ['./product-table.component.css']
+  selector: 'app-product-grid',
+  templateUrl: './product-grid.component.html',
+  styleUrls: ['./product-grid.component.css']
 })
 
-export class ProductTableComponent implements OnInit {
+export class ProductGridComponent implements OnInit {
 
   products$: Product[] = [];
   
@@ -28,6 +28,7 @@ export class ProductTableComponent implements OnInit {
     this.productService.getProducts().subscribe(
       res => { 
         this.products$ = res
+        console.log(this.products$);
       },
       error => {
         console.log(error)

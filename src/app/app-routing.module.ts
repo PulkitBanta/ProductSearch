@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductTableComponent } from './product-table/product-table.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductGridComponent } from './product-grid/product-grid.component';
 
 
 const routes: Routes = [
-  {path:"", redirectTo: 'app/products', pathMatch: 'full'},
-  {path: 'app/products', component: ProductTableComponent}
+  {path:"", redirectTo: 'products', pathMatch: 'full'},
+  {path: 'products', component: ProductGridComponent},
+  {path: 'products/:id', component: ProductDetailComponent}
 ];
 
 @NgModule({

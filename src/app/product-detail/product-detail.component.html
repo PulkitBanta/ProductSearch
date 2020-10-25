@@ -1,0 +1,13 @@
+<div class="container my-3">
+    <button class="btn btn-info my-3" (click)='back()'><-- Back</button>
+    <div class="row my-5">
+        <div class="col-md-6">
+            <img class="card-img-top" [src]='product?.image_url' alt="Card image">
+        </div>
+        <div class="col-md-6">
+            <h2 class="font-weight-bold text-center">{{ product?.name }}</h2>
+            <p class="my-3">Description: {{ product?.description }}</p>
+            <p class="my-3 text-muted">Price: ₹{{ product?.price }}</p>
+        </div>
+    </div>
+</div>
