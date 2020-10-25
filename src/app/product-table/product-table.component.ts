@@ -11,7 +11,6 @@ import { Product } from '../product'
 export class ProductTableComponent implements OnInit {
 
   products$: Product[] = [];
-  query: string;
   
   constructor(
     private productService: ProductService
@@ -21,17 +20,14 @@ export class ProductTableComponent implements OnInit {
     this.getProducts()
   }
 
-  search(): void {
-    // if(this.query !== "") {
-    //   // add method to get the products data with query
-    // }
+  search($event): void {
+    console.log($event.value);
   }
 
   getProducts(): void {
     this.productService.getProducts().subscribe(
       res => { 
         this.products$ = res
-        console.log(res);
       },
       error => {
         console.log(error)

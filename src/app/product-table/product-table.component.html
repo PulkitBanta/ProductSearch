@@ -2,10 +2,10 @@
     <div class="form-group mt-5">
         <div class="row">
             <div class="col-md-9 offset-md-1">
-                <input (input)="search()" [(ngModel)]="query" id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
+                <input (input)="search()" #searchVal id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
             </div>
             <div class="col-md-1 text-right">
-                <button class="btn btn-outline-secondary">Search</button>
+                <button class="btn btn-outline-secondary" (click)='search(searchVal)'>Search</button>
             </div>
         </div>
     </div>
@@ -14,9 +14,10 @@
             <div class="card">
                 <img class="card-img-top" [src]='product?.image_url' alt="Card image">
                 <div class="card-body">
-                    <h5 class="card-title">{{ product?.title }}</h5>
+                    <h5 class="card-title font-weight-bold">{{ product?.name }}</h5>
                     <p class="card-text">{{ product?.description }}</p>
-                    <p class="card-text"><small class="text-muted">₹{{ product?.price }}</small></p>
+                    <p class="card-text"><small class="text-muted">Price: ₹{{ product?.price }}</small></p>
+                    <a routerLink='/products/{{product?.id}}' class="btn btn-outline-info">Details</a>
                 </div>
             </div>
         </div>
