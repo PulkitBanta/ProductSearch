@@ -31,6 +31,7 @@ export class ProductTableComponent implements OnInit {
     this.productService.getProducts().subscribe(
       res => { 
         this.products$ = res
+        console.log(res);
       },
       error => {
         console.log(error)

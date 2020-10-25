@@ -5,7 +5,6 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductTableComponent } from './product-table/product-table.component'
 
 @NgModule({
@@ -16,7 +15,6 @@ import { ProductTableComponent } from './product-table/product-table.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     HttpClientModule,
     FormsModule
   ],

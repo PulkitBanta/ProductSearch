@@ -1,32 +1,24 @@
 <div class="container">
-  <div class="form-group mt-5">
-    <div class="row">
-      <div class="col-md-9 offset-md-1">
-        <input (input)="search()" [(ngModel)]="query" id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
-      </div>
-      <div class="col-md-1 text-right">
-        <button class="btn btn-outline-secondary">Search</button>
-      </div>
+    <div class="form-group mt-5">
+        <div class="row">
+            <div class="col-md-9 offset-md-1">
+                <input (input)="search()" [(ngModel)]="query" id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
+            </div>
+            <div class="col-md-1 text-right">
+                <button class="btn btn-outline-secondary">Search</button>
+            </div>
+        </div>
     </div>
-  </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-      <th scope="col">##</th>
-      <th scope="col">Product Image</th>
-      <th scope="col">Product Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of products$; index as i">
-      <th scope="row">{{ i + 1 }}</th>
-      <td><img class="mr-2" src="{{ product?.image_url }}" height="50" width="50"></td>
-      <td>{{ product?.name }}</td>
-      <td>{{ product?.description }}</td>
-      <td>{{ product?.price | number }} $</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="row">
+        <div class="col-md-4 my-3" *ngFor='let product of products$'>
+            <div class="card">
+                <img class="card-img-top" [src]='product?.image_url' alt="Card image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product?.title }}</h5>
+                    <p class="card-text">{{ product?.description }}</p>
+                    <p class="card-text"><small class="text-muted">₹{{ product?.price }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
