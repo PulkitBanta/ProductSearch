@@ -8,6 +8,6 @@ import com.pulkit.model.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	
-	List<Product> findByNameIgnoreCase(String name);
+	List<Product> findByNameIgnoreCaseContains(String name);
 
 }

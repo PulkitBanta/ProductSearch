@@ -28,7 +28,7 @@ public class ProductService {
 	}
 	
 	public List<Product> searchProducts(String query) {
-		return this.productRepo.findByNameIgnoreCase(query);
+		return this.productRepo.findByNameIgnoreCaseContains(query);
 	}
 	
 }

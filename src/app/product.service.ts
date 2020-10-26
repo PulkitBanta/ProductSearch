@@ -1,5 +1,5 @@
-import { Injectable} from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { Injectable, Query} from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { Product } from './product'
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService{
 
-  private baseURL: string = "/api"
+  private baseURL: string = "/api/product"
 
   constructor(
     private http : HttpClient
@@ -16,16 +16,18 @@ export class ProductService{
 
   // initial data
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseURL}/product/all`)
+    return this.http.get<Product[]>(`${this.baseURL}/all`)
   }
 
   // product with particular id
   getProduct(id: number): Observable<Product> {
-    return this.http.get<Product>(`${this.baseURL}/product/${id}`)
+    return this.http.get<Product>(`${this.baseURL}/${id}`)
   }
 
   // searched products
   getSearchProducts(query: string): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseURL}/product/${query}`);
+    return this.http.get<Product[]>(`${this.baseURL}/search`, {
+      params: new HttpParams().set('query', query)
+    });
   }
 }

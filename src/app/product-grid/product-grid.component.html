@@ -1,17 +1,17 @@
 <div class="container">
-    <div class="form-group mt-5">
+    <div class="form-group mt-2">
         <div class="row">
-            <div class="col-md-9 offset-md-1">
+            <div class="col-md-9 offset-md-1 col-sm-8 offset-sm-2">
                 <input #query id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
             </div>
-            <div class="col-md-1 text-right">
+            <div class="col-md-1 col-sm-2 text-right">
                 <button class="btn btn-outline-secondary" (click)='search(query.value)'>Search</button>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 my-3" *ngFor='let product of products$'>
-            <div class="card">
+            <div class="card shadow">
                 <img class="card-img-top" [src]='product?.image_url' alt="Card image">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">{{ product?.name }}</h5>
@@ -21,5 +21,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div *ngIf='products$.length == 0'>
+        <h2 class="text-center my-3 mt-5">
+            Cannot find any product!!
+        </h2>
     </div>
 </div>
