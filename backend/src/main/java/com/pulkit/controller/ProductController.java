@@ -31,6 +31,11 @@ public class ProductController {
 		return this.productService.getProduct(id);
 	}
 	
+	@GetMapping("/search")
+	public List<Product> getSearchProduct(@RequestParam String query) {
+		return this.productService.searchProducts(query);
+	}
+	
 	@PostMapping("/add")
 	public String addProduct(@RequestParam Product product) {
 		return this.productService.addProduct(product);

@@ -27,4 +27,8 @@ public class ProductService {
 		return "added";
 	}
 	
+	public List<Product> searchProducts(String query) {
+		return this.productRepo.findByNameIgnoreCase(query);
+	}
+	
 }
