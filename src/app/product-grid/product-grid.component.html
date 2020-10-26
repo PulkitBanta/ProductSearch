@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 my-3" *ngFor='let product of products$'>
+        <div class="col-md-4 my-3 card-group" *ngFor='let product of products$'>
             <div class="card shadow">
                 <img class="card-img-top" [src]='product?.image_url' alt="Card image">
                 <div class="card-body">
@@ -23,8 +23,8 @@
         </div>
     </div>
     <div *ngIf='products$.length == 0'>
-        <h2 class="text-center my-3 mt-5">
-            Cannot find any product!!
+        <h2 class="text-center my-3 mt-5 font-weight-bold">
+            Sorry, we couldn't find any matches.
         </h2>
     </div>
 </div>
