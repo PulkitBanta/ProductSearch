@@ -2,10 +2,10 @@
     <div class="form-group mt-5">
         <div class="row">
             <div class="col-md-9 offset-md-1">
-                <input (input)="search()" #searchVal id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
+                <input #query id="typeahead-basic" type="text" class="form-control" placeholder="Enter a product to be searched" />
             </div>
             <div class="col-md-1 text-right">
-                <button class="btn btn-outline-secondary" (click)='search(searchVal)'>Search</button>
+                <button class="btn btn-outline-secondary" (click)='search(query.value)'>Search</button>
             </div>
         </div>
     </div>

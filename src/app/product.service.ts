@@ -19,7 +19,13 @@ export class ProductService{
     return this.http.get<Product[]>(`${this.baseURL}/product/all`)
   }
 
+  // product with particular id
   getProduct(id: number): Observable<Product> {
     return this.http.get<Product>(`${this.baseURL}/product/${id}`)
+  }
+
+  // searched products
+  getSearchProducts(query: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseURL}/product/${query}`);
   }
 }
